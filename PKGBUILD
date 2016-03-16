@@ -11,11 +11,6 @@ source=("git+https://github.com/qterminal/$pkgname.git")
 sha256sums=("SKIP")
 
 
-pkgver() {
-	cd "$srcdir/$pkgname"
-	git describe --always | sed "s/-/./g"
-}
-
 build() {
 	mkdir -p build
 	cd build
