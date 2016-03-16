@@ -1,5 +1,5 @@
 pkgname=qterminal
-pkgver=0.6.0.1
+pkgver=0.6.0
 pkgrel=1
 pkgdesc="Lightweight Qt-based terminal emulator"
 arch=("x86_64")
