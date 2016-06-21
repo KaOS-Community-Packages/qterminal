@@ -1,0 +1,26 @@
+--- src/qterminal/src/mainwindow.cpp	2016-06-21 10:51:26.173252041 -0700
++++ src/qterminal/src/mainwindow.cpp-new	2016-06-21 11:09:04.646076923 -0700
+@@ -94,8 +94,7 @@
+     setup_FileMenu_Actions();
+     setup_ActionsMenu_Actions();
+     setup_ViewMenu_Actions();
+-    setupCustomDirs();
+-
++    
+     /* The tab should be added after all changes are made to
+        the main window; otherwise, the initial prompt might
+        get jumbled because of changes in internal geometry. */
+@@ -508,13 +507,6 @@
+     menu_Window->addMenu(keyboardCursorShapeMenu);
+ }
+ 
+-void MainWindow::setupCustomDirs()
+-{
+-    const QSettings settings;
+-    const QString dir = QFileInfo(settings.fileName()).canonicalPath() + "/color-schemes/";
+-    TermWidgetImpl::addCustomColorSchemeDir(dir);
+-}
+-
+ void MainWindow::on_consoleTabulator_currentChanged(int)
+ {
+ }
