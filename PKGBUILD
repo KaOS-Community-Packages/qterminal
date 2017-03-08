@@ -1,5 +1,5 @@
 pkgname=qterminal
-pkgver=0.6.0
+pkgver=0.7.1
 pkgrel=1
 pkgdesc="Lightweight Qt-based terminal emulator"
 arch=("x86_64")
@@ -8,17 +8,16 @@ license=("GPL2")
 depends=("qt5-base" "qtermwidget")
 makedepends=("cmake" "qt5-tools")
 source=("https://github.com/lxde/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz")
-sha256sums=("SKIP")
+sha256sums=("8d49b29febccc158dd115a099115e4ed1c487d4308ec92818e1abeb8821c848f")
 
 
 build() {
 	mkdir -p build
 	cd build
+
 	cmake "$srcdir/$pkgname-$pkgver" \
 		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DUSE_SYSTEM_QXT=OFF \
-		-DUSE_QT5=true
+		-DCMAKE_INSTALL_LIBDIR=lib
 	make
 }
 
