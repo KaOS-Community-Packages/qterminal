@@ -1,5 +1,5 @@
 pkgname=qterminal
-pkgver=0.15.0
+pkgver=0.16.0
 pkgrel=1
 pkgdesc="Lightweight Qt-based terminal emulator"
 arch=("x86_64")
@@ -25,3 +25,4 @@ package() {
 	make DESTDIR="$pkgdir" install
 }
 sha256sums=('557f74a946d009bb6e598c5d0c6de9356cda325f674876a457874c7525affd64')
+sha256sums=('871d7b3ed8d6e815b6feccf6a603781c1794ac6bc20c6a52f067ee7fa192ed24')
