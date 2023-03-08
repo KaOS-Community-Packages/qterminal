@@ -2,13 +2,13 @@ pkgname=qterminal
 pkgver=1.2.0
 pkgrel=1
 pkgdesc="Lightweight Qt-based terminal emulator"
-arch=("x86_64")
-url="https://github.com/qterminal/qterminal"
-license=("GPL2")
-depends=("qt5-base" "qtermwidget" "qt5-x11extras")
-makedepends=("cmake" "qt5-tools" "lxqt-build-tools")
-source=("https://github.com/lxde/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.xz")
-sha256sums=('d9410a74899d50b0648510c738483244a1502d308276ce4b7b74b85ef716a45f')
+arch=('x86_64')
+url="https://github.com/lxqt/$pkgname"
+license=('GPL2')
+depends=('qt5-base' 'qtermwidget' 'qt5-x11extras')
+makedepends=('cmake' 'qt5-tools' 'lxqt-build-tools')
+source=("${pkgname}-${pkgver}::https://github.com/lxqt/$pkgname/archive/refs/tags/$pkgver.tar.gz")
+sha256sums=('SKIP')
 
 build() {
 	mkdir -p build
